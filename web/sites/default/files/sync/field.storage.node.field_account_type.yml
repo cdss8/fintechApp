@@ -1,0 +1,27 @@
+uuid: 19f5dbab-6d1a-450f-85ed-57bda581278e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_account_type
+field_name: field_account_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: current_account
+      label: 'Current account'
+    -
+      value: savings_account
+      label: 'Savings account'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

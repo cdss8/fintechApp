@@ -1,0 +1,23 @@
+uuid: db75de75-db86-4b68-9e30-4824d4d665e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_balance
+    - node.type.bank_account
+id: node.bank_account.field_balance
+field_name: field_balance
+entity_type: node
+bundle: bank_account
+label: Balance
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0.0
+  max: null
+  prefix: $
+  suffix: ''
+field_type: decimal

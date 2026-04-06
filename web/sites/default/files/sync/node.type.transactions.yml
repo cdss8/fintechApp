@@ -1,0 +1,18 @@
+uuid: 30f883f7-1488-4beb-8073-880a824ff7b7
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Transactions
+type: transactions
+description: 'User transactions'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

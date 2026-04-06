@@ -1,0 +1,21 @@
+uuid: 19a3c26f-d5e2-4c99-b4fd-b014a0612942
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_account_type
+    - node.type.bank_account
+  module:
+    - options
+id: node.bank_account.field_account_type
+field_name: field_account_type
+entity_type: node
+bundle: bank_account
+label: 'Account type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,19 @@
+uuid: fc2da104-1af9-4088-abb9-600d06bb7d7c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_iban
+    - node.type.bank_account
+id: node.bank_account.field_iban
+field_name: field_iban
+entity_type: node
+bundle: bank_account
+label: IBAN
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

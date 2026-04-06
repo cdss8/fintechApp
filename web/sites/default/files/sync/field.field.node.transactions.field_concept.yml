@@ -1,0 +1,19 @@
+uuid: db6b552d-b7c8-469d-b28b-a0a5f2969589
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_concept
+    - node.type.transactions
+id: node.transactions.field_concept
+field_name: field_concept
+entity_type: node
+bundle: transactions
+label: Concept
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

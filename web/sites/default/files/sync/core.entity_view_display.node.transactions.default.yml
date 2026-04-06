@@ -1,0 +1,58 @@
+uuid: 791a8162-22ab-45f6-8663-3e19a536d9c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.transactions.field_amount
+    - field.field.node.transactions.field_concept
+    - field.field.node.transactions.field_receiver_account
+    - field.field.node.transactions.field_sender_account
+    - node.type.transactions
+  module:
+    - user
+id: node.transactions.default
+targetEntityType: node
+bundle: transactions
+mode: default
+content:
+  field_amount:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_concept:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_receiver_account:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_sender_account:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }
