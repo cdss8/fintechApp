@@ -1,1 +1,1 @@
-Backend robusto para la gestion bancaria. Tecnologia de uso Drupal 11 y Arquitectura desacoplada.
+Stack: Drupal 11, WSL Ununtu Virtual Machine, Docker, DDEV, composer
