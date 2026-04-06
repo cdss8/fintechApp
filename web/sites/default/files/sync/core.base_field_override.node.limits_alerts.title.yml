@@ -1,0 +1,18 @@
+uuid: 9534f199-66f8-44e6-ad62-4600a41d9c98
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.limits_alerts
+id: node.limits_alerts.title
+field_name: title
+entity_type: node
+bundle: limits_alerts
+label: 'Account name '
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

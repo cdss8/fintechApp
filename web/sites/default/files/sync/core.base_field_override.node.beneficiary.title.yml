@@ -1,0 +1,18 @@
+uuid: 5ed1188f-71ba-4603-aa7a-9d057d72ce56
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.beneficiary
+id: node.beneficiary.title
+field_name: title
+entity_type: node
+bundle: beneficiary
+label: ' Do you represent an individual or a legal entity?'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

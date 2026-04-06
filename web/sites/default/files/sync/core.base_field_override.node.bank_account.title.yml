@@ -1,0 +1,18 @@
+uuid: bb1d1e0b-bd2d-4651-9dee-24fe5534fb92
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.bank_account
+id: node.bank_account.title
+field_name: title
+entity_type: node
+bundle: bank_account
+label: 'Account Name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

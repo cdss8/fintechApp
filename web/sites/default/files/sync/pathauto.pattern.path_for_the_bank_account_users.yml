@@ -1,0 +1,22 @@
+uuid: 40891b3f-4b60-468e-8290-a9251c59f585
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: path_for_the_bank_account_users
+label: 'Path for the bank account users'
+type: 'canonical_entities:node'
+pattern: '/bank-account/[node:field_owner]'
+selection_criteria:
+  453e7a87-f021-4faa-9591-11bc87fb890a:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 453e7a87-f021-4faa-9591-11bc87fb890a
+    context_mapping:
+      node: node
+    bundles:
+      bank_account: bank_account
+selection_logic: and
+weight: -5
+relationships: {  }

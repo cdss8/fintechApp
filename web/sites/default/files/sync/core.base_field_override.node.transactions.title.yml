@@ -1,0 +1,18 @@
+uuid: 9a0a0c2c-f6b9-49bf-b406-fd96430ad83c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.transactions
+id: node.transactions.title
+field_name: title
+entity_type: node
+bundle: transactions
+label: 'Account name '
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,18 @@
+uuid: fbeae84a-f876-4431-9fce-454b60ccd3fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.loans
+id: node.loans.title
+field_name: title
+entity_type: node
+bundle: loans
+label: 'Full name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
