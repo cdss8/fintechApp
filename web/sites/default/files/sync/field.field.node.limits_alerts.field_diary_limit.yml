@@ -1,0 +1,25 @@
+uuid: cf3bbf14-a2a1-45bc-baf2-8e8f9319c570
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_diary_limit
+    - node.type.limits_alerts
+id: node.limits_alerts.field_diary_limit
+field_name: field_diary_limit
+entity_type: node
+bundle: limits_alerts
+label: 'Diary limit'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 20000.0
+default_value_callback: ''
+settings:
+  min: null
+  max: 20000.0
+  prefix: $
+  suffix: ''
+field_type: decimal

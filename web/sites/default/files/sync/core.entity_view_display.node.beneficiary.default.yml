@@ -1,0 +1,55 @@
+uuid: 285e43d1-4dbf-4c1e-9e03-b639b9cc04f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.beneficiary.field_account_iban
+    - field.field.node.beneficiary.field_bank
+    - field.field.node.beneficiary.field_contract_name
+    - field.field.node.beneficiary.field_owner
+    - node.type.beneficiary
+  module:
+    - options
+    - user
+id: node.beneficiary.default
+targetEntityType: node
+bundle: beneficiary
+mode: default
+content:
+  field_account_iban:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_bank:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_contract_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_owner:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

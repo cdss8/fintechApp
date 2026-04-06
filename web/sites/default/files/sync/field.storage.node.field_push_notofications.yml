@@ -1,0 +1,18 @@
+uuid: 66e154f7-c1b9-4054-afbf-4e2e5b5a0f00
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_push_notofications
+field_name: field_push_notofications
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

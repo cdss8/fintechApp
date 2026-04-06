@@ -1,0 +1,25 @@
+uuid: 87dc26ba-0f5e-4e14-89bf-79de76896577
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_interest
+    - node.type.loans
+id: node.loans.field_interest
+field_name: field_interest
+entity_type: node
+bundle: loans
+label: Interest
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 1.8
+default_value_callback: ''
+settings:
+  min: 1.8
+  max: null
+  prefix: ''
+  suffix: '%'
+field_type: decimal

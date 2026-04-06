@@ -1,0 +1,42 @@
+uuid: bc0dd68e-2e0c-426d-b013-d6eb1a385312
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_bank
+field_name: field_bank
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: goldman_sach
+      label: 'Goldman Sach'
+    -
+      value: santander
+      label: Santander
+    -
+      value: american_express
+      label: 'American Express'
+    -
+      value: sberbank
+      label: Sberbank
+    -
+      value: bange
+      label: BANGE
+    -
+      value: bbva
+      label: BBVA
+    -
+      value: multibanco
+      label: Multibanco
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

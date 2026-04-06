@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.bank_account.field_account_type
     - field.field.node.bank_account.field_balance
+    - field.field.node.bank_account.field_default
     - field.field.node.bank_account.field_holder
     - field.field.node.bank_account.field_iban
     - node.type.bank_account
@@ -33,6 +34,14 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     weight: 102
+    region: content
+  field_default:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 105
     region: content
   field_holder:
     type: entity_reference_label

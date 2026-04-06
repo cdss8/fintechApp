@@ -1,19 +1,18 @@
-uuid: 1ecde2f7-e400-4c60-ae38-f5faa4978687
+uuid: 3ecd30b7-ae4e-4439-95aa-8a6a28a344cd
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.bank_account.field_account_type
-    - field.field.node.bank_account.field_balance
-    - field.field.node.bank_account.field_default
-    - field.field.node.bank_account.field_holder
-    - field.field.node.bank_account.field_iban
-    - node.type.bank_account
+    - field.field.node.beneficiary.field_account_iban
+    - field.field.node.beneficiary.field_bank
+    - field.field.node.beneficiary.field_contract_name
+    - field.field.node.beneficiary.field_owner
+    - node.type.beneficiary
   module:
     - path
-id: node.bank_account.default
+id: node.beneficiary.default
 targetEntityType: node
-bundle: bank_account
+bundle: beneficiary
 mode: default
 content:
   created:
@@ -22,44 +21,35 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_account_type:
+  field_account_iban:
+    type: string_textfield
+    weight: 122
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_bank:
     type: options_select
     weight: 123
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_balance:
-    type: number
-    weight: 122
+  field_contract_name:
+    type: string_textfield
+    weight: 121
     region: content
     settings:
-      placeholder: ''
-    third_party_settings: {  }
-  field_default:
-    type: entity_reference_autocomplete
-    weight: 125
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_holder:
+  field_owner:
     type: entity_reference_autocomplete
     weight: 124
     region: content
     settings:
       match_operator: CONTAINS
       match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_iban:
-    type: string_textfield
-    weight: 121
-    region: content
-    settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }

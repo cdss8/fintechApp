@@ -1,0 +1,21 @@
+uuid: 804e9759-3578-46a0-b8ba-d0dcb4b5c612
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_status
+    - node.type.loans
+  module:
+    - options
+id: node.loans.field_status
+field_name: field_status
+entity_type: node
+bundle: loans
+label: Status
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

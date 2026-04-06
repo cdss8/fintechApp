@@ -1,0 +1,23 @@
+uuid: f604d2ae-0968-46e4-a766-7a95cec9b1f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_loan_amount
+    - node.type.loans
+id: node.loans.field_loan_amount
+field_name: field_loan_amount
+entity_type: node
+bundle: loans
+label: 'Loan amount'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0.0
+  max: null
+  prefix: $
+  suffix: ''
+field_type: decimal

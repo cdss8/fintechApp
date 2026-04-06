@@ -1,0 +1,19 @@
+uuid: 503163fa-0860-4f51-a1b3-9c70f4fa501d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_account_iban
+    - node.type.beneficiary
+id: node.beneficiary.field_account_iban
+field_name: field_account_iban
+entity_type: node
+bundle: beneficiary
+label: 'Account IBAN'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

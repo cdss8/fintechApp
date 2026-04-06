@@ -1,19 +1,17 @@
-uuid: 1ecde2f7-e400-4c60-ae38-f5faa4978687
+uuid: 0612c914-6930-4951-b372-99ec0af346da
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.bank_account.field_account_type
-    - field.field.node.bank_account.field_balance
-    - field.field.node.bank_account.field_default
-    - field.field.node.bank_account.field_holder
-    - field.field.node.bank_account.field_iban
-    - node.type.bank_account
+    - field.field.node.limits_alerts.field_diary_limit
+    - field.field.node.limits_alerts.field_push_notofications
+    - field.field.node.limits_alerts.field_reference
+    - node.type.limits_alerts
   module:
     - path
-id: node.bank_account.default
+id: node.limits_alerts.default
 targetEntityType: node
-bundle: bank_account
+bundle: limits_alerts
 mode: default
 content:
   created:
@@ -22,44 +20,27 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_account_type:
-    type: options_select
-    weight: 123
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_balance:
+  field_diary_limit:
     type: number
-    weight: 122
-    region: content
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
-  field_default:
-    type: entity_reference_autocomplete
-    weight: 125
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_holder:
-    type: entity_reference_autocomplete
-    weight: 124
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_iban:
-    type: string_textfield
     weight: 121
     region: content
     settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_push_notofications:
+    type: boolean_checkbox
+    weight: 122
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_reference:
+    type: entity_reference_autocomplete
+    weight: 123
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }

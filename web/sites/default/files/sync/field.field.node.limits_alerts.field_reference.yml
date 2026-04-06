@@ -1,0 +1,29 @@
+uuid: 84eef955-b8c0-42b7-b77e-530e02dba590
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_reference
+    - node.type.bank_account
+    - node.type.limits_alerts
+id: node.limits_alerts.field_reference
+field_name: field_reference
+entity_type: node
+bundle: limits_alerts
+label: Reference
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      bank_account: bank_account
+    sort:
+      field: nid
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

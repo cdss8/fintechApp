@@ -1,0 +1,20 @@
+uuid: 760f92a9-6c6d-4cc2-b195-5fa5f5aa5e07
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_diary_limit
+field_name: field_diary_limit
+entity_type: node
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

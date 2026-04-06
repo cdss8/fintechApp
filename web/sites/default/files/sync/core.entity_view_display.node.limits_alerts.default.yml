@@ -1,0 +1,51 @@
+uuid: 983d6d9f-3b00-4b5a-84d9-0fbd3ca4a968
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.limits_alerts.field_diary_limit
+    - field.field.node.limits_alerts.field_push_notofications
+    - field.field.node.limits_alerts.field_reference
+    - node.type.limits_alerts
+  module:
+    - user
+id: node.limits_alerts.default
+targetEntityType: node
+bundle: limits_alerts
+mode: default
+content:
+  field_diary_limit:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_push_notofications:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_reference:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

@@ -1,0 +1,23 @@
+uuid: 6ff3c7d9-a3d9-475c-ac9c-26e68dc582e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_push_notofications
+    - node.type.limits_alerts
+id: node.limits_alerts.field_push_notofications
+field_name: field_push_notofications
+entity_type: node
+bundle: limits_alerts
+label: 'Push notofications'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

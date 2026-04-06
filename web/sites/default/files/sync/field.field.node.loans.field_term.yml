@@ -1,0 +1,21 @@
+uuid: b5fa0ac4-42be-43c9-8fcd-6c98b688b1cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_term
+    - node.type.loans
+  module:
+    - options
+id: node.loans.field_term
+field_name: field_term
+entity_type: node
+bundle: loans
+label: Term
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
