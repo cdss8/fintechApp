@@ -1,0 +1,13 @@
+uuid: c83f8fe5-4414-4f83-9b76-bd319374e39f
+langcode: en
+status: true
+dependencies:
+  enforced:
+    theme:
+      - solo
+_core:
+  default_config_hash: sY7yYMtoPPaEx5wYN3_iaJQ78_b8XC0CIG79JQu8du0
+id: solo_date_m
+label: 'Solo Date Medium'
+locked: false
+pattern: 'D F d, o'

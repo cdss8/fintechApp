@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.node.bank_account.field_account_type
     - field.field.node.bank_account.field_balance
-    - field.field.node.bank_account.field_default
     - field.field.node.bank_account.field_holder
     - field.field.node.bank_account.field_iban
     - node.type.bank_account
@@ -33,16 +32,6 @@ content:
     weight: 8
     region: content
     settings:
-      placeholder: ''
-    third_party_settings: {  }
-  field_default:
-    type: entity_reference_autocomplete
-    weight: 9
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
       placeholder: ''
     third_party_settings: {  }
   field_holder:

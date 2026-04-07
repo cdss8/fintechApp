@@ -2,13 +2,13 @@ _core:
   default_config_hash: ijfbzDTN4CbE7Sr-6ubWzy_t1vH4OtU1doNCLssVz-4
 langcode: en
 uuid: 12c7cfe4-98cb-4861-b8aa-1a7771fdcea9
-name: 'Drush Site-Install'
+name: 'Core Banking App (JM)'
 mail: admin@example.com
 slogan: ''
 page:
   403: ''
   404: ''
-  front: /node
+  front: /node/12
 admin_compact_mode: false
 weight_select_max: 100
 default_langcode: en

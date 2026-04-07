@@ -24,7 +24,9 @@
         "drupal/core-recommended": "^11.3",
         "drupal/gin": "^5.0",
         "drupal/gin_toolbar": "^3.0",
+        "drupal/jsonapi_extras": "^3.28",
         "drupal/pathauto": "^1.14",
+        "drupal/solo": "^1.0",
         "drush/drush": "^13.7"
     },
     "conflict": {

@@ -8,7 +8,7 @@ id: node.transactions.title
 field_name: title
 entity_type: node
 bundle: transactions
-label: 'Account name '
+label: 'Person ahead of the (main) operation'
 description: ''
 required: true
 translatable: true

@@ -14,6 +14,27 @@ settings:
     -
       value: less_than_30_days
       label: 'Less than 30 days'
+    -
+      value: 2_months
+      label: '2 months'
+    -
+      value: 9_months
+      label: '9 months'
+    -
+      value: 10_motns
+      label: '10 months'
+    -
+      value: 11_months
+      label: '11 months'
+    -
+      value: 1_year
+      label: '1 year'
+    -
+      value: 3_months
+      label: 3_months
+    -
+      value: 4_months
+      label: '4 months'
   allowed_values_function: ''
 module: options
 locked: false
