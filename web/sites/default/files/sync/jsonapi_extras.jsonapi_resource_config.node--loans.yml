@@ -1,21 +1,21 @@
-uuid: 568e8d68-09d9-4cfc-babf-8787858217e2
+uuid: a2593ebc-75f0-42d7-992d-c0e07ce3ad3e
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.bank_account
+    - node.type.loans
   module:
     - jsonapi_defaults
 third_party_settings:
   jsonapi_defaults:
     page_limit: 50
-id: node--bank_account
+id: node--loans
 disabled: false
-path: account
-resourceType: accounts
+path: loans
+resourceType: loans
 resourceFields:
   nid:
-    disabled: true
+    disabled: false
     fieldName: nid
     publicName: nid
     enhancer:
@@ -27,7 +27,7 @@ resourceFields:
     enhancer:
       id: ''
   vid:
-    disabled: true
+    disabled: false
     fieldName: vid
     publicName: vid
     enhancer:
@@ -39,7 +39,7 @@ resourceFields:
     enhancer:
       id: ''
   type:
-    disabled: true
+    disabled: false
     fieldName: type
     publicName: type
     enhancer:
@@ -57,7 +57,7 @@ resourceFields:
     enhancer:
       id: ''
   revision_log:
-    disabled: true
+    disabled: false
     fieldName: revision_log
     publicName: revision_log
     enhancer:
@@ -93,31 +93,31 @@ resourceFields:
     enhancer:
       id: ''
   promote:
-    disabled: true
+    disabled: false
     fieldName: promote
     publicName: promote
     enhancer:
       id: ''
   sticky:
-    disabled: true
+    disabled: false
     fieldName: sticky
     publicName: sticky
     enhancer:
       id: ''
   default_langcode:
-    disabled: true
+    disabled: false
     fieldName: default_langcode
     publicName: default_langcode
     enhancer:
       id: ''
   revision_default:
-    disabled: true
+    disabled: false
     fieldName: revision_default
     publicName: revision_default
     enhancer:
       id: ''
   revision_translation_affected:
-    disabled: true
+    disabled: false
     fieldName: revision_translation_affected
     publicName: revision_translation_affected
     enhancer:
@@ -129,32 +129,32 @@ resourceFields:
     enhancer:
       id: ''
   menu_link:
-    disabled: true
+    disabled: false
     fieldName: menu_link
     publicName: menu_link
     enhancer:
       id: ''
-  field_account_type:
+  field_interest:
     disabled: false
-    fieldName: field_account_type
-    publicName: field_account_type
+    fieldName: field_interest
+    publicName: field_interest
     enhancer:
       id: ''
-  field_balance:
+  field_loan_amount:
     disabled: false
-    fieldName: field_balance
-    publicName: field_balance
+    fieldName: field_loan_amount
+    publicName: field_loan_amount
     enhancer:
       id: ''
-  field_holder:
+  field_status:
     disabled: false
-    fieldName: field_holder
-    publicName: field_holder
+    fieldName: field_status
+    publicName: field_status
     enhancer:
       id: ''
-  field_iban:
+  field_term:
     disabled: false
-    fieldName: field_iban
-    publicName: field_iban
+    fieldName: field_term
+    publicName: field_term
     enhancer:
       id: ''
