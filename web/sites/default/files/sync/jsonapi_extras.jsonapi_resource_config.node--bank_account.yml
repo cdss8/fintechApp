@@ -21,7 +21,7 @@ resourceFields:
     enhancer:
       id: ''
   uuid:
-    disabled: false
+    disabled: true
     fieldName: uuid
     publicName: uuid
     enhancer:
@@ -33,7 +33,7 @@ resourceFields:
     enhancer:
       id: ''
   langcode:
-    disabled: false
+    disabled: true
     fieldName: langcode
     publicName: langcode
     enhancer:
@@ -45,13 +45,13 @@ resourceFields:
     enhancer:
       id: ''
   revision_timestamp:
-    disabled: false
+    disabled: true
     fieldName: revision_timestamp
     publicName: revision_timestamp
     enhancer:
       id: ''
   revision_uid:
-    disabled: false
+    disabled: true
     fieldName: revision_uid
     publicName: revision_uid
     enhancer:
@@ -63,13 +63,13 @@ resourceFields:
     enhancer:
       id: ''
   status:
-    disabled: false
+    disabled: true
     fieldName: status
     publicName: status
     enhancer:
       id: ''
   uid:
-    disabled: false
+    disabled: true
     fieldName: uid
     publicName: uid
     enhancer:
@@ -81,13 +81,13 @@ resourceFields:
     enhancer:
       id: ''
   created:
-    disabled: false
+    disabled: true
     fieldName: created
     publicName: created
     enhancer:
       id: ''
   changed:
-    disabled: false
+    disabled: true
     fieldName: changed
     publicName: changed
     enhancer:
@@ -123,7 +123,7 @@ resourceFields:
     enhancer:
       id: ''
   path:
-    disabled: false
+    disabled: true
     fieldName: path
     publicName: path
     enhancer:
