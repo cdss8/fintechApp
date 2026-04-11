@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fintechApp #Drupal 11, DDEV, Docker , apache, PHP 8.3
+  labels:
+    app: fintech-app
+spec:
+  replicas: 2 #Seguridad
+  selector:
+    matchLabels:
+      app: fintech-app
+  template:
+    metadata:
+      labels:
+        app: fintech-app
+    spec:
+      containers:
+      - name: drupal
+        image: cdss8/fintechApp:latest #Image
+        ports:
+        - containerPort: 80
+        env:
+        - name: DRUPAL_DB_HOST
+          value: "mariadb-service" #DB
+        volumeMounts:
+        - name: oauth-keys
+          mountPath: "/var/www/html/private"
+          readOnly: true
+      volumes:
+      - name: oauth-keys
+        secret:
+          secretName: oauth2-keys-secret # Seguridad
