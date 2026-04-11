@@ -1,0 +1,28 @@
+body { 
+    font-family:sans-serif;
+    background: #f0f2f5;
+    padding: 20px; 
+}
+
+.card {
+    background: white; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 300px;
+}
+
+.balance {color: #27ae60;
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+
+.loader { 
+    color: #666;
+    font-style: italic;
+}
+
+main{
+    margin-top: 150px;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fintech Banking Application</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="logic.js"></script>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <div id="app"><section>
+            <h1>FintechApp Test Template</h1>
+            <div v-if="cuenta" class="card">
+                <h3>Saldo Disponible</h3>
+                <p class="balance">$ {{ cuenta.field_balance }} </p>
+                <small>IBAN: {{ cuenta.field_iban }}</small>
+            </div>
+        </section>
+
+        <br><br><br><br>
+
+        <section>
+            <h1>FintechApp Drupal Demo</h1>
+            
+            <div v-if="cuentadrupal" class="card">
+                <h3>Saldo Real de Drupal</h3>
+                <p class="balance"> {{ cuentadrupal.title }} </p>
+                <h2> {{ cuentadrupal.field_account_type }} </h2>
+                <p class="balance">$ {{ cuentadrupal.field_balance }} </p>
+                <small>IBAN: {{ cuentadrupal.field_iban }}</small>
+            </div>
+
+            <div v-else-if="!error" class="loader">
+                Consultando con el servidor de Drupal...
+            </div>
+
+            <div v-else class="error-msg" style="color: red;">
+            {{ error }}
+            </div>
+        </section>
+    </div>
+</body>
+</html>
