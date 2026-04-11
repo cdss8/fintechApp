@@ -1,0 +1,5 @@
+.ddev
+.git
+/web/sites/default/files
+vendor
+node_modules
