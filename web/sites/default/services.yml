@@ -1,10 +1,9 @@
-# Archivo de servicios limpio para Fintech App
+
 parameters:
   http.response.debug_cacheability_headers: false
   http.response.debug_render_cache_frames: false
   security.enable_super_user: true
 
-  # Configuración CORS para que Angular pueda conectarse
   cors.config:
     enabled: true
     allowedHeaders: ['*']
@@ -14,7 +13,6 @@ parameters:
     maxAge: false
     supportsCredentials: true
 
-  # Configuración de Twig (Aquí estaba el error de duplicado)
   twig.config:
     debug: false
     reload_cache: false
@@ -22,7 +20,6 @@ parameters:
     cache: true
 
 services:
-  # Los servicios se mantienen por defecto a menos que necesites algo específico
   cache.backend.null:
     class: Drupal\Core\Cache\NullBackendFactory
     # To maximize compatibility and normalize the behavior across user agents,
