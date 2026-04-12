@@ -53,6 +53,32 @@ window.onload = function() {
             async makeTransfer() {
                 if (!this.transferAmount || this.transferAmount <= 0) return alert("Invalid amount");
                 
+                try {
+                    const response = await fetch('http://localhost:1080/process-transfer', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            amount: this.transferAmount,
+                            destination: this.destination,
+                            originAccount: this.cuentadrupal.field_iban
+                        })
+                    });
+
+                    const result = await response.json();
+
+                    if (result.success) {
+                        
+                        // Updfating the Ui if ducess
+                        this.cuentadrupal.field_balance -= this.transferAmount;
+                        this.showTransfer = false;
+                        alert(`Success! ID: ${result.transactionId}`);
+                    } else {
+                        alert("Error: " + result.message);
+                    }
+                } catch (err) {
+                    alert("Could not connect to the Fastify backend");
+                }
+
                 console.log(`Enviando ${this.transferAmount} a ${this.destination}`);
                 
                 if (this.cuentadrupal) {
