@@ -6,5 +6,9 @@
 /web/sites/default/files/styles/
 /private/*.key
 .DS_Store
+k8s/secrets.yml
 Thumbs.db
-
+.DS_Store
+Thumbs.db
+.vscode/
+node_modules/

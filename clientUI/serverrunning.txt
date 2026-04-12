@@ -1,0 +1,4 @@
+Run a terminal or an enviroment to see frontend changes.
+
+I used python3 in the wsl (Unbuntu) to run my vue js + taiwild App
+python3 -m http.server 8182 --directory ~/fintechApp/clientUI
