@@ -6,40 +6,79 @@
     <title>Fintech Banking Application</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="logic.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
 
 </head>
-<body>
-    <div id="app"><section>
-            <h1>FintechApp Test Template</h1>
-            <div v-if="cuenta" class="card">
-                <h3>Saldo Disponible</h3>
-                <p class="balance">$ {{ cuenta.field_balance }} </p>
-                <small>IBAN: {{ cuenta.field_iban }}</small>
+<body id="app" class="bg-slate-900 text-white font-sans">
+    <header class="flex justify-between items-center mb-10">
+            <div>
+                <h1 class="text-4xl font-bold text-emerald-400">FintechApp</h1>
+                <p class="text-slate-400 text-lg">Bienvenido de nuevo</p>
             </div>
-        </section>
-
-        <br><br><br><br>
-
-        <section>
-            <h1>FintechApp Drupal Demo</h1>
-            
-            <div v-if="cuentadrupal" class="card">
-                <h3>Saldo Real de Drupal</h3>
-                <p class="balance"> {{ cuentadrupal.title }} </p>
-                <h2> {{ cuentadrupal.field_account_type }} </h2>
-                <p class="balance">$ {{ cuentadrupal.field_balance }} </p>
-                <small>IBAN: {{ cuentadrupal.field_iban }}</small>
+            <div class="h-12 w-12 bg-emerald-500 rounded-full flex items-center justify-center font-bold text-slate-900">
+                cdds8
             </div>
-
-            <div v-else-if="!error" class="loader">
-                Consultando con el servidor de Drupal...
+    </header>
+    
+    <div  v-if="cuentadrupal" class="bg-gradient-to-br from-emerald-600 to-teal-700 p-6 rounded-3xl shadow-xl mb-6 transform transition hover:scale-105">
+            <div class="flex justify-between items-start mb-8">
+                <span class="text-emerald-100 text-xs tracking-widest uppercase">Saldo Disponible</span>
+                <svg class="w-8 h-8 text-emerald-200 opacity-50" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/></svg>
             </div>
-
-            <div v-else class="error-msg" style="color: red;">
-            {{ error }}
-            </div>
-        </section>
+            <h2 class="text-4xl font-mono font-bold mb-2">{{ cuentadrupal.title }} </h2>
+            <p class="text-emerald-100 text-lg opacity-80">{{ cuentadrupal.field_account_type }}</p>
+            <h2 class="text-4xl font-mono font-bold mb-2">${{ cuentadrupal.field_balance }} </h2>
+            <p class="text-emerald-100 text-lg opacity-80">{{ cuentadrupal.field_iban }}</p>
     </div>
+
+<div class="grid grid-cols-3 gap-4 mb-8">
+            <button @click="showTransfer = !showTransfer" class="bg-slate-800 p-4 rounded-2xl border border-slate-700 hover:bg-slate-700 transition">
+                <span class="block text-4xl">💸</span>
+                <span class="text-2xl text-slate-300">Transfer</span>
+            </button>
+
+            <button @click="showLimits = !showLimits" class="bg-slate-800 p-4 rounded-2xl border border-slate-700 hover:bg-slate-700 transition">
+                <span class="block text-4xl">📊</span>
+                <span class="text-2xl text-slate-300">Limits and alerts</span>
+            </button>
+            
+            <button @click="showLoans = !showLoans" class="bg-slate-800 p-4 rounded-2xl border border-slate-700 hover:bg-slate-700 transition">
+                <span class="block text-4xl">📜</span>
+                <span class="text-2xl text-slate-300">Loans</span>
+            </button>
+        </div>
+
+        <transition name="fade">
+            <div v-if="showTransfer" class="bg-slate-800 p-6 rounded-3xl border border-slate-700 mb-6">
+                <h3 class="text-lg font-semibold mb-4 text-emerald-400">New Transfer</h3>
+                <input type="number" v-model="transferAmount" placeholder="amount" class="w-full bg-slate-900 border border-slate-700 rounded-xl p-3 mb-3 focus:outline-none focus:border-emerald-500">
+                <input type="text" v-model="destination" placeholder="IBAN of the account you would like to send" class="w-full bg-slate-900 border border-slate-700 rounded-xl p-3 mb-4 focus:outline-none focus:border-emerald-500">
+                <button @click="makeTransfer" class="w-full bg-emerald-500 text-slate-900 font-bold p-3 rounded-xl hover:bg-emerald-400 transition">
+                    Confirm operation
+                </button>
+            </div>
+
+            <div v-if="showLimits" class="bg-slate-800 p-6 rounded-3xl border border-slate-700 mb-6">
+                <h3 v-if="limits" class="text-lg font-semibold mb-4 text-emerald-400">Banking limits</h3>
+                <span class="text-slate-400">Diary</span><br>
+                <span class="font-mono text-emerald-400">${{ limits.field_daily_limit || limits.field_dairy_limit }}</span>
+                <button @click="showLimits = !showTLimits" class="w-full bg-emerald-500 text-slate-900 font-bold p-3 rounded-xl hover:bg-emerald-400 transition">
+                    Done
+                </button>
+            </div>
+
+        </transition>
+
+        <div v-if="!cuentadrupal && !error" class="text-center py-20">
+            <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-emerald-500 mx-auto"></div>
+            <p class="mt-4 text-slate-500">Sincronizing with Drupal...</p>
+        </div>
+    </div>
+
+    <style>
+        .fade-enter-active, .fade-leave-active { transition: opacity 0.5s; }
+        .fade-enter-from, .fade-leave-to { opacity: 0; }
+    </style>
 </body>
 </html>
